@@ -69,7 +69,7 @@ class SSD1306Base(object):
     and provide an implementation for the _initialize function.
     """
 
-    def __init__(self, width, height, rst, dc=None, sclk=None, din=None, cs=None,
+    def __init__(self, width, height, rst=None, dc=None, sclk=None, din=None, cs=None,
                  gpio=None, spi=None, i2c_bus=None, i2c_address=SSD1306_I2C_ADDRESS,
                  i2c=None):
         self._log = logging.getLogger('Adafruit_SSD1306.SSD1306Base')
@@ -235,7 +235,7 @@ class SSD1306Base(object):
 
 
 class SSD1306_128_64(SSD1306Base):
-    def __init__(self, rst, dc=None, sclk=None, din=None, cs=None, gpio=None,
+    def __init__(self, rst=None, dc=None, sclk=None, din=None, cs=None, gpio=None,
                  spi=None, i2c_bus=None, i2c_address=SSD1306_I2C_ADDRESS,
                  i2c=None):
         # Call base class constructor.
@@ -280,7 +280,7 @@ class SSD1306_128_64(SSD1306Base):
 
 
 class SSD1306_128_32(SSD1306Base):
-    def __init__(self, rst, dc=None, sclk=None, din=None, cs=None, gpio=None,
+    def __init__(self, rst=None, dc=None, sclk=None, din=None, cs=None, gpio=None,
                  spi=None, i2c_bus=None, i2c_address=SSD1306_I2C_ADDRESS,
                  i2c=None):
         # Call base class constructor.
@@ -322,7 +322,7 @@ class SSD1306_128_32(SSD1306Base):
 
 
 class SSD1306_96_16(SSD1306Base):
-    def __init__(self, rst, dc=None, sclk=None, din=None, cs=None, gpio=None,
+    def __init__(self, rst=None, dc=None, sclk=None, din=None, cs=None, gpio=None,
                  spi=None, i2c_bus=None, i2c_address=SSD1306_I2C_ADDRESS,
                  i2c=None):
         # Call base class constructor.
